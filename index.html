@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>🔥 Free Fire Headshot Booster — LEGIT</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- Base & glow theme ---------- */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,Arial;
+      background:
+        radial-gradient(circle at 10% 20%, rgba(255,0,85,0.05) 0%, rgba(0,238,238,0.03) 30%),
+        linear-gradient(135deg,#050615 0%, #14021d 100%);
+      color:#e6f7ff;
+      padding:28px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+    }
+
+    body::before{
+      content:"";
+      position:fixed;left:-20%;top:-20%;width:140%;height:140%;
+      background:conic-gradient(from 120deg,#ff0066,#00ffee,#8a4cff,#ff0066);
+      filter:blur(180px);
+      opacity:0.08;
+      animation:spin 30s linear infinite;
+    }
+    @keyframes spin{from{transform:rotate(0)}to{transform:rotate(360deg)}}
+
+    .container{width:100%; max-width:1200px; display:flex; flex-direction:column; gap:18px;}
+
+    header{
+      display:flex; align-items:center; gap:14px; justify-content:space-between; color:#fff;
+    }
+    .brand{display:flex; align-items:center; gap:12px;}
+    .spin-icon{
+      width:56px; height:56px; border-radius:12px;
+      background:linear-gradient(135deg,#ff6a8a,#2ef0d0);
+      display:flex; justify-content:center; align-items:center;
+      animation:spin3d 6s linear infinite;
+    }
+    @keyframes spin3d{
+      0%{transform:rotateX(0) rotateY(0)}
+      50%{transform:rotateX(180deg) rotateY(180deg)}
+      100%{transform:rotateX(360deg) rotateY(360deg)}
+    }
+
+    h1{
+      font-family:"Orbitron";
+      font-size:1.4rem; letter-spacing:1px;
+      background:linear-gradient(90deg,#ff8aa3,#7ef0d6);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .controls{display:flex; gap:12px; align-items:center;}
+    .counter{
+      background:rgba(255,255,255,0.03);
+      padding:10px 14px; border-radius:12px;
+      border:1px solid rgba(255,255,255,0.04);
+      font-weight:700; display:flex; gap:10px; align-items:center;
+    }
+    .badge{background:linear-gradient(90deg,#ff0055,#4400ff); padding:6px 10px; border-radius:10px;}
+
+    .top-actions{display:flex; gap:8px;}
+    .btn{padding:8px 12px; border-radius:10px; border:none; cursor:pointer; font-weight:700}
+    .btn-muted{background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.06)}
+
+    /* ---------- CARD GRID ---------- */
+    .grid{display:grid; gap:18px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{
+      padding:12px; border-radius:14px; text-align:center;
+      background:rgba(255,255,255,0.02);
+      border:1px solid rgba(255,255,255,0.04);
+      box-shadow:0 12px 34px rgba(0,0,0,0.6);
+      transition:.2s;
+    }
+    .card:hover{transform:translateY(-8px)}
+    .card img{width:100%; border-radius:8px; margin-bottom:10px}
+    .card h3{font-family:"Orbitron"; color:#9ff3e7;}
+    .download-btn{
+      width:100%; padding:10px; border-radius:10px;
+      background:linear-gradient(90deg,#ff0055,#4400ff);
+      color:#fff; font-weight:800; margin-top:10px;
+    }
+
+    footer{opacity:.6; text-align:center; padding:18px 0}
+
+    /* modal */
+    .modal-backdrop{
+      position:fixed; inset:0; background:rgba(0,0,0,0.55);
+      display:none; align-items:center; justify-content:center;
+      z-index:999;
+    }
+    .modal{
+      max-width:520px;
+      background:#090b12;
+      padding:18px; border-radius:12px;
+      border:1px solid rgba(255,255,255,0.05);
+    }
+    .progress{height:12px; background:rgba(255,255,255,0.05); border-radius:12px}
+    .progress i{display:block; height:100%; width:0%; background:linear-gradient(90deg,#ff0055,#00ffee)}
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <div class="brand">
+        <div class="spin-icon">
+          <svg viewBox="0 0 24 24" width="26" fill="white"><path d="M12 2l3 6 6 1-4.5 4 1 6L12 17l-5.5 2 1-6L3 9l6-1 3-6z"/></svg>
+        </div>
+        <div>
+          <h1>🔥 Free Fire Headshot Booster</h1>
+          <div style="opacity:.85;font-size:.9rem">Tap Download — reach <b>15</b> → Download Center → +20 → Unlock</div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <div class="counter">
+          <div class="badge" id="phaseLabel">Phase 1</div>
+          <span id="clickCount">0</span> / <span id="clickTotal">35</span>
+        </div>
+
+        <div class="top-actions">
+          <button id="resetBtn" class="btn btn-muted">Reset</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid" id="grid"></main>
+
+    <footer>© 2025 Free Fire Headshot Tools</footer>
+  </div>
+
+  <div id="modalBackdrop" class="modal-backdrop">
+    <div class="modal" id="modal"></div>
+  </div>
+
+<script>
+/* ================= CONFIG ================= */
+const MONETIZE = "https://www.effectivegatecpm.com/j2au39gqi?key=0a1f3fbcb1e5ff5df2fd7714f649f422";
+
+const DOWNLOAD_CENTER_HTML = `
+<!doctype html><html><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Download Center</title></head>
+<body style="background:#020208;color:#fff;font-family:Arial;display:flex;justify-content:center;align-items:center;height:100vh">
+<div style="padding:20px;background:#0d0d15;border-radius:12px;width:90%;max-width:500px;text-align:center">
+<h1>Download Center</h1>
+<p>Close this tab & continue downloading.</p>
+</div>
+</body></html>
+`;
+const DOWNLOAD_CENTER_URL = "data:text/html;base64," + btoa(DOWNLOAD_CENTER_HTML);
+
+/* PHASES */
+const PHASE1 = 15;
+const PHASE2 = 20;
+const TOTAL = PHASE1 + PHASE2;
+
+/* STORAGE */
+const STORAGE_KEY = "ff_headshot_clicks_clean_v1";
+
+/* CARDS */
+const CARDS = [
+  {title:'Headshot Booster', desc:'Boost aim instantly.', img:'https://i.postimg.cc/cHzsYkBc/3.png'},
+  {title:'Paid Sensi Unlock', desc:'Pro sensitivity.', img:'https://i.postimg.cc/8kW5MDx3/2.png'},
+  {title:'Best FF Settings', desc:'Peak FF performance.', img:'https://i.postimg.cc/yxBzFqS2/4.png'},
+  {title:'Free FF Headshot App', desc:'Training utility.', img:'https://i.postimg.cc/8Cjk5Vhy/1.png'}
+];
+
+/* STATE */
+let count = parseInt(localStorage.getItem(STORAGE_KEY) || "0");
+const clickEl = document.getElementById("clickCount");
+const phaseLabel = document.getElementById("phaseLabel");
+document.getElementById("clickTotal").textContent = TOTAL;
+updateUI();
+
+/* --------- RENDER CARDS --------- */
+function renderCards(){
+  const grid=document.getElementById("grid");
+  grid.innerHTML="";
+  CARDS.forEach(c=>{
+    grid.innerHTML += `
+      <div class="card">
+        <h3>${c.title}</h3>
+        <img src="${c.img}">
+        <p>${c.desc}</p>
+        <button class="download-btn">🔥 Download 🔥</button>
+        <div class="small">Tap to download</div>
+      </div>`;
+  });
+
+  document.querySelectorAll(".download-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=> handleDownload());
+  });
+}
+
+renderCards();
+
+/* -------- LOGIC -------- */
+async function handleDownload(){
+  await showVerify();
+
+  count = Math.min(count+1, TOTAL);
+  localStorage.setItem(STORAGE_KEY, count);
+  updateUI();
+
+  if(count === PHASE1){
+    window.open(DOWNLOAD_CENTER_URL,"_blank");
+    await showNote("Phase 1 Completed","Download Center opened.");
+  }
+  else if(count === TOTAL){
+    await showSuccess();
+    window.open(MONETIZE,"_blank");
+  }
+}
+
+function updateUI(){
+  clickEl.textContent = count;
+  phaseLabel.textContent = (count < PHASE1 ? "Phase 1" : count < TOTAL ? "Phase 2" : "Unlocked");
+}
+
+/* -------- MODALS -------- */
+function showVerify(){
+  return new Promise(res=>{
+    const backdrop=document.getElementById("modalBackdrop");
+    const modal=document.getElementById("modal");
+    backdrop.style.display="flex";
+
+    modal.innerHTML=`
+      <h2>Verifying Download…</h2>
+      <p>Preparing file.</p>
+      <div class="progress"><i id="pb"></i></div>
+    `;
+
+    let p=0;
+    const i=setInterval(()=>{
+      p+=12;
+      document.getElementById("pb").style.width=p+"%";
+      if(p>=100){
+        clearInterval(i);
+        setTimeout(()=>{backdrop.style.display="none"; res();},300);
+      }
+    },120);
+  });
+}
+
+function showNote(t,x){
+  return new Promise(res=>{
+    const b=document.getElementById("modalBackdrop");
+    const m=document.getElementById("modal");
+    b.style.display="flex";
+    m.innerHTML=`<h2>${t}</h2><p>${x}</p><button class="btn btn-muted" id="okx">OK</button>`;
+    document.getElementById("okx").onclick=()=>{b.style.display="none";res();}
+  });
+}
+
+function showSuccess(){
+  return showNote("Unlocked","Opening reward…");
+}
+
+/* RESET */
+document.getElementById("resetBtn").onclick=()=>{
+  count=0;
+  localStorage.removeItem(STORAGE_KEY);
+  updateUI();
+  showNote("Reset","Progress cleared.");
+};
+</script>
+
+</body>
+</html>
